@@ -14,7 +14,7 @@ const navItems = [
         href: "/companions"
     },
     {
-        lable: "My Journeys",
+        label: "My Journeys",
         href: "/profile"
     },
 ]
@@ -25,8 +25,15 @@ const Navitems = () => {
 
     return (
         <nav className='flex items-center gap-4'>
-            {navItems.map(({ lable, href }) => (
-                <Link className={cn(pathname === href && "text-primary font-semibold")} href={href} key={href}>{lable}</Link>
+            {navItems.map(({ label, href }) => (
+                <Link 
+                    className={cn(pathname === href && "text-primary font-semibold")} 
+                    href={href} 
+                    key={href}
+                    aria-current={pathname === href ? "page" : undefined}
+                >
+                    {label}
+                </Link>
             ))}        
         </nav>
     )
