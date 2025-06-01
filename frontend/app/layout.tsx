@@ -13,6 +13,13 @@ export const metadata: Metadata = {
   description: "Real-time AI Teaching Platform",
 };
 
+/**
+ * Defines the root layout for the application, applying global styles, font, and navigation.
+ *
+ * Renders the {@link Navbar} component and wraps all page content with consistent layout and styling.
+ *
+ * @param children - The page content to be rendered within the layout.
+ */
 export default function RootLayout({
   children,
 }: Readonly<{
